@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>TATETI 2.0</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.bundle.min.css">
+    <!-- Path to icons -->
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="color-theme-deeppurple">
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+    
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="index" class="page">
+        
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <center>
+                    <div class="block">
+                        <h2>TATETI 2.0</h2>
+                        <p>Jugá contra un amigo, o desafiá a la Inteligencia Artificial y tratá de no perder... porque ganar no vas a poder, ¿o si?</p>
+                        <!-- Link to another page -->
+                        <a href="/vsH/" class="button">Humano vs Humano</a>
+                        <a href="/vsIA/" class="button">Vs Inteligencia Artificial</a>
+                    </div>
+                    <footer>Creado por Leandro Lobo, año 2020</footer>
+                    </center>
+                </div>
+
+                <div class="popup popup-vsH">
+                    <div class="block">
+                      <h3>Humano vs Humano</h3>
+                      <div class="list no-hairlines-md">
+                      <ul>
+                          <li class="item-content item-input item-input-outline">
+                              <div class="item-media">
+                                <i class="icon demo-list-icon"></i>
+                              </div>
+                              <div class="item-inner">
+                                <div class="item-title item-floating-label">Jugador 1</div>
+                                <div class="item-input-wrap">
+                                  <input type="text" placeholder="Nombre del jugador 1" class="jug1" maxlength="10">
+                                  <span class="input-clear-button"></span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="item-content item-input item-input-outline">
+                              <div class="item-media">
+                                <i class="icon demo-list-icon"></i>
+                              </div>
+                              <div class="item-inner">
+                                <div class="item-title item-floating-label">Jugador 2</div>
+                                <div class="item-input-wrap">
+                                  <input type="text" placeholder="Nombre del jugador 2" class="jug2" maxlength="10">
+                                  <span class="input-clear-button"></span>
+                                </div>
+                              </div>
+                            </li>
+                      </ul>
+                      </div>
+                      <h3>¿COMO JUGAR?...</h3>
+                        <p>Para colocar una ficha: Presionar sobre un casillero vacío.</p>
+                        <p>Reiniciar tablero: Presionar sobre el tablero.</p>
+                      <a class="link popup-close initVsH">COMENZAR</a>
+                    </div>
+                </div>
+                <div class="popup popup-vsIA">
+                    <div class="block">
+                        <h3>Vs Inteligencia Artificial</h3>
+                        <div class="list no-hairlines-md">
+                        <ul>
+                            <li class="item-content item-input item-input-outline">
+                              <div class="item-media">
+                                <i class="icon demo-list-icon"></i>
+                              </div>
+                              <div class="item-inner">
+                                <div class="item-title item-floating-label">Humano</div>
+                                <div class="item-input-wrap">
+                                  <input type="text" placeholder="Ingresá tu nombre, humano" class="humano" maxlength="10">
+                                  <span class="input-clear-button"></span>
+                                </div>
+                              </div>
+                            </li>
+                        </ul>
+                        </div>
+                        <h3>¿COMO JUGAR?...</h3>
+                        <p>Para colocar una ficha: Presionar sobre un casillero vacío.</p>
+                        <p>Reiniciar tablero: Presionar sobre el tablero.</p>
+                        <a class="link popup-close initVsIA">COMENZAR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.bundle.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
